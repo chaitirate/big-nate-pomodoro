@@ -21,8 +21,8 @@ let intervalId = null;
 let isRunning = false;
 let currentSession = 'work';
 let selectedSound = 'none';
-let workBgData = '';
-let breakBgData = '';
+let workBgData = 'assets/study.JPG';
+let breakBgData = 'assets/break.JPG';
 let secondsRemaining = Number(workInput.value) * 60;
 
 function stopAllSounds() {
