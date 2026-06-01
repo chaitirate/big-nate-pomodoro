@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Clock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <h1>Pomodoro Clock <span class="version-tag">v1.0</span></h1>
+
+    <section class="timer-card">
+      <div class="timer-display">
+        <p class="session-label" id="sessionLabel">Work Session</p>
+        <p class="time-left" id="timeLeft">25:00</p>
+      </div>
+
+      <div class="controls-row">
+        <button id="startBtn" class="btn primary">Start</button>
+        <button id="pauseBtn" class="btn" disabled>Pause</button>
+        <button id="resetBtn" class="btn">Reset</button>
+      </div>
+
+      <div class="settings-grid">
+        <label>
+          Work (minutes)
+          <input id="workInput" type="number" min="1" max="90" step="1" value="25" />
+        </label>
+        <label>
+          Break (minutes)
+          <input id="breakInput" type="number" min="1" max="60" step="1" value="5" />
+        </label>
+      </div>
+      <div class="bg-picker-group">
+        <div class="bg-picker">
+          <p class="bg-label">Work background</p>
+          <input id="workBgFile" type="file" accept="image/*" />
+          <div class="drop-zone" id="workDropZone">Drag & drop work image</div>
+        </div>
+        <div class="bg-picker">
+          <p class="bg-label">Break background</p>
+          <input id="breakBgFile" type="file" accept="image/*" />
+          <div class="drop-zone" id="breakDropZone">Drag & drop break image</div>
+        </div>
+      </div>
+      <div class="sound-group">
+        <p class="sound-label">Sound</p>
+        <div class="sound-picker" role="group" aria-label="Choose sound">
+          <button type="button" class="sound-button" data-sound="rain">🌧 Rain</button>
+          <button type="button" class="sound-button" data-sound="cafe">☕ Cafe</button>
+          <button type="button" class="sound-button" data-sound="fire">🔥 Fire</button>
+        </div>
+      </div>
+
+      <p class="hint">Change durations before starting. The timer updates when you reset.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
